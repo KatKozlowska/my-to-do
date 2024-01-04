@@ -3,29 +3,29 @@ import delBtn from "../assets/delete.png";
 import "./ToDoTask.scss";
 
 type ToDoTaskProps = {
-    task:ToDo;
-    toDelete(taskNameCompeted: string):  void;
-    onCheck(): void;
+  task: ToDo;
+  toDelete(taskNameCompeted: string): void;
+};
+
+const ToDoTask = ({ task, toDelete }: ToDoTaskProps) => {
+  return (
+    <div className="todo-item">
+      <div className="checkbox">
+        <input className="input" type="checkbox" />
+        <label className="label" key={task.taskName} className="task">{task.taskName}</label>
+      </div>
     
-}
 
-const ToDoTask = ({task,toDelete, onCheck}:ToDoTaskProps) => {
-
-    return(
-        <div className="todo-item">
-        <span className="checkbox">
-        <input  type="checkbox" onChange={onCheck}/>
-        </span> 
-        <div className="task">
-        {task.taskName}
-        </div>
-       
-         <div>
-        <button onClick={() =>{toDelete(task.taskName)}}>
-        <img src={delBtn} className="delete"/>
+      <div>
+        <button
+          onClick={() => {
+            toDelete(task.taskName);
+          }}
+        >
+          <img src={delBtn} className="delete" />
         </button>
-        </div>
-        </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 export default ToDoTask;
