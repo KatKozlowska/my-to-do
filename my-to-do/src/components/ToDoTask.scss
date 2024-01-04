@@ -1,0 +1,33 @@
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: black solid 2px;
+    border-radius: 5px;
+    margin: 5px 15px;
+    height: 45px;
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px
+}
+button{
+    background-color: white;
+    border: none;
+}
+
+.delete {
+    margin-right: 10px;
+    width:18px;
+    background-color: white;
+}
+
+.task{
+   
+    width: 100%;
+   
+}
