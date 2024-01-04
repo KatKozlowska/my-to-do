@@ -10,6 +10,7 @@ type NavProps = {
 };
 
 const Nav = ({ input, handleInput, handleSubmit, reset }: NavProps) => {
+  
   return (
     <>
       <div className="nav">
@@ -30,6 +31,7 @@ const Nav = ({ input, handleInput, handleSubmit, reset }: NavProps) => {
             <img className="plus" src={plus} />
           </button>
         </form>
+    
       </section>
     </>
   );

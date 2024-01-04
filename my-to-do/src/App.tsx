@@ -7,7 +7,6 @@ import ToDoTask from "./components/ToDoTask";
 const App = () => {
   const [input, setInput] = useState<string>("");
   const [todo, setTodo] = useState<ToDo[]>([]);
-  
 
   const handleInput = (event: FormEvent<HTMLInputElement>) => {
     setInput(event.currentTarget.value);
@@ -15,11 +14,10 @@ const App = () => {
   const addTask = (): void => {
     const newTask = { taskName: input };
     setTodo([...todo, newTask]);
-    
   };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+    event.preventDefault(); //makes sure the page does not refresh every time you add new task
     if (input == "") {
       alert("Please enter a todo");
     } else addTask();
