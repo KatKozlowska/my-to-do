@@ -12,7 +12,7 @@ const ToDoTask = ({ task, toDelete }: ToDoTaskProps) => {
     <div className="todo-item">
       <div className="checkbox">
         <input className="input" type="checkbox" />
-        <label className="label" key={task.taskName} className="task">{task.taskName}</label>
+        <label className="label" key={task.taskName} >{task.taskName}</label>
       </div>
     
 
