@@ -4,7 +4,7 @@ import "./ToDoTask.scss";
 
 type ToDoTaskProps = {
   task: ToDo;
-  toDelete(taskNameCompeted: string): void;
+  toDelete(taskNametoDelete: string): void;
 };
 
 const ToDoTask = ({ task, toDelete }: ToDoTaskProps) => {
